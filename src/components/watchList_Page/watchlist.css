@@ -1,0 +1,110 @@
+
+
+.watchlist-container {
+  font-family: Arial, sans-serif;
+  padding: 10px;
+  height: 100%;
+  /* padding-left: 40%; */
+}
+
+.search-button {
+  margin-right: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: #2020df;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+  margin: 20px;
+  align-items: center;
+  padding-left: 20%;
+}
+
+.filter-buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: #e0e0e0;
+  color: #555;
+  font-size: 16px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.filter-buttons button.active {
+  background-color: hsl(217, 91%, 63%);
+  color: #fff;
+}
+
+.search-bar {
+  margin: 20px;
+  text-align: center;
+}
+
+.search-bar input {
+  width: 40%;
+  padding: 10px;
+  /* border: 1px solid #ddd;
+      border-radius: 20px; */
+  font-size: 16px;
+  /* outline: none; */
+}
+
+.watchlist-table {
+  margin: 20px auto;
+  width: 90%;
+  background-color: #fff;
+  border-radius: 10px;
+  border-color: aquamarine;
+  overflow: hidden;
+  box-shadow: 0 4px 5px rgba(0, 255, 30, 0.1);
+  
+}
+
+.watchlist-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.watchlist-table th,
+.watchlist-table td {
+  padding: 15px;
+  text-align: left;
+}
+
+.watchlist-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+  color: #666;
+}
+
+.watchlist-table td {
+  border-top: 1px solid #f0f0f0;
+}
+
+.watchlist-table tr:hover {
+  background-color: #f9f9f9;
+}
+
+.movie-poster {
+  width: 50px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.delete-btn {
+  color: #e74c3c;
+  cursor: pointer;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.delete-btn:hover {
+  color: #c0392b;
+}
