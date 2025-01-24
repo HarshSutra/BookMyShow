@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./WatchList.css";
+import "./watchlist.css";
 
 const WatchList = ({ watchList, removeFromWatchlist }) => {
   const [search, setSearch] = useState("");
