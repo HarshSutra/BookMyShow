@@ -1,11 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, Suspense, lazy } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Header from "./components/Header/Header";
-import WatchList from "./components/watchList_Page/WatchList";
-import Movie_card_Script from "./components/Home_Page/Movie_card";
+// import Header from "./components/Header/Header";
+// import WatchList from "./components/watchList_Page/WatchList";
+// import Movie_card_Script from "./components/Home_Page/Movie_card";
+  const Header = lazy(() => import("./components/Header/Header"));
+const WatchList = lazy(() => import("./components/watchList_Page/WatchList"));
+const Movie_card_Script = lazy(() =>
+  import("./components/Home_Page/Movie_card")
+);
 
 const App = () => {
-
   const initialWatchList = JSON.parse(localStorage.getItem("watchlist")) || [];
   const [watchList, setWatchList] = useState(initialWatchList);
   const [movies, setMovies] = useState([]);
@@ -41,15 +45,17 @@ const App = () => {
         <Route
           path="/watchlist"
           element={
-            <WatchList
-              watchList={watchList}
-              removeFromWatchlist={removeFromWatchlist}
-            />
+            <Suspense fallback={<>...</>}>
+              <WatchList
+                watchList={watchList}
+                removeFromWatchlist={removeFromWatchlist}
+              />
+            </Suspense>
           }
         />
       </Routes>
     </Router>
   );
-}
+};
 
 export default App;
